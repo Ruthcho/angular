@@ -1,0 +1,27 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.brand {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.discount {
+  color: #c62828;
+  font-size: 0.85em;
+  margin-inline-start: 8px;
+}

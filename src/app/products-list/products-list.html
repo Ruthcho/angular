@@ -1,0 +1,15 @@
+@for (product of products(); track $index) {
+  <div class="product-card">
+    <h3>{{ product.name }}</h3>
+    
+    <p>{{ product.description }}</p>
+    <p class="price" style="color: #da0505;">
+      {{ product.price }} ₪
+      @if (product.price-((100-product.Discount_percentages)/100*product.price) > 300) {
+       <span>הנחה משתלמת</span>
+      }
+    </p>
+  </div>
+} @empty {
+  <p>אין מוצרים להצגה</p>
+}
