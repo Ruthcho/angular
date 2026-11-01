@@ -3,11 +3,11 @@
   "version": 1,
   "cli": {
     "packageManager": "npm",
-    "analytics": "b30d4f3e-d48e-4970-9465-c3dae55b0039"
+    "analytics": false
   },
   "newProjectRoot": "projects",
   "projects": {
-    "hw": {
+    "angular-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -25,17 +25,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "security": {
-              "allowedHosts": []
-            },
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "styles": ["src/styles.css"]
           },
           "configurations": {
             "production": {
@@ -65,10 +55,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "hw:build:production"
+              "buildTarget": "angular-app:build:production"
             },
             "development": {
-              "buildTarget": "hw:build:development"
+              "buildTarget": "angular-app:build:development"
             }
           },
           "defaultConfiguration": "development"

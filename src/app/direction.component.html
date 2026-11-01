@@ -1,0 +1,37 @@
+<h2>ציונים לפי מקצוע</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>מקצוע</th>
+      <th>ציון</th>
+      <th>סטטוס</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (t of test; track t.subject) {
+      <tr>
+        <td>{{ t.subject }}</td>
+        <td [class.fail]="t.score < 60">{{ t.score }}</td>
+        <td>
+          @if (t.score >= 60) {
+            עובר
+          } @else {
+            לא עובר
+          }
+        </td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="3">אין מקצועות להצגה</td>
+      </tr>
+    }
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>ממוצע</td>
+      <td>{{ average }}</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
